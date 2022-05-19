@@ -40,15 +40,17 @@
 
         var enemies = [
             {left: 350, top: 200},
-            {left: 450, top: 220}
+            {left: 450, top: 250},
+            {left: 550, top: 120},
+            {left: 250, top: 320}
         ]
-
+///PLAYER DRAW///
         function drawPlayer(){
             content = "<div class='player' style='left:"+player.left+"px; top:"+player.top+"px'></div>";
             document.getElementById("players").innerHTML = content;
         }
         drawPlayer();
-
+///ENEMIES DRAW///
         function drawEnemies(){
             content = "";
             console.log(enemies);

@@ -59,6 +59,7 @@
         }
         drawEnemies();
 
+///SPACESHIP MOVEMENT///
         document.onkeydown = function(e) {
             console.log(e);
             if(e.keyCode == 37){ // left
@@ -67,9 +68,14 @@
             if(e.keyCode == 39){ // right
                 player.left = player.left + 10;
             }
+            if(e.keyCode == 38 && player.top > 500){ // UP
+                player.top = player.top - 10;
+            }
+            if(e.keyCode == 40 && player.top < 625){ // DOWN
+                player.top = player.top + 10;
+            }
             drawPlayer();
         }
-
 
 
 
